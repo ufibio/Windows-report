@@ -1,16 +1,9 @@
 @echo off
-
-::We don't want people running this in the wrong place
 IF NOT EXIST ".\gmod.exe" (
 	ECHO Game binary doesn't exist. Are you executing this script from the wrong directory?
 	EXIT /B 1
 )
 
-::Give the user fair warning
-ECHO This script will attempt to reset Garry's Mod to its default state. If the game is running, it will be closed.
-ECHO You will lose any settings that have been changed and potentially any saved data, such as duplications.
-ECHO Addons will not be removed.
-ECHO.
 
 ::Let the user bail
 CHOICE /M "Are you sure you want to continue?"
